@@ -1,0 +1,67 @@
+### USER
+//register
+post http://localhost:5000/users/register
+Content-Type: application/json
+
+{
+  "name":"fath",
+  "email":"fath@gmail.com",
+  "password":"12345678",
+  "profession":"web developer"
+
+}
+
+###
+//login
+post http://localhost:5000/users/login
+Content-Type: application/json
+
+{
+  "email":"redha@gmail.com",
+  "password":"12345678"
+}
+
+###
+//update
+put http://localhost:5000/users/4
+Content-Type: application/json
+
+{
+  "name":"redhafafa",
+  "email":"redhafafa@gmail.com",
+  "password":"12345678",
+  "avatar":"https://images.com",
+  "profession":"backend web dev" 
+}
+
+###
+//get user by id
+get http://localhost:5000/users/1
+
+
+###
+//get users
+get http://localhost:5000/users?user_ids=5&user_ids=6
+
+###
+//user logout
+post http://localhost:5000/users/logout
+Content-Type: application/json
+
+{
+  "user_id":"4"
+}
+
+### REFRESH TOKENS
+// create refresh token 
+POST  http://localhost:5000/refresh_tokens
+Content-Type: application/json
+
+{
+  "refresh_token":"2137sadhjkhu214dsa",
+  "user_id": 4
+}
+
+###
+// get token 
+get  http://localhost:5000/refresh_tokens?refresh_token=2137sadhjkhu214dsa
