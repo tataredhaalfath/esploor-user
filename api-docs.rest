@@ -17,31 +17,31 @@ post http://localhost:5000/users/login
 Content-Type: application/json
 
 {
-  "email":"redha@gmail.com",
+  "email":"fath@gmail.com",
   "password":"12345678"
 }
 
 ###
 //update
-put http://localhost:5000/users/4
+put http://localhost:5000/users/51
 Content-Type: application/json
 
 {
-  "name":"redhafafa",
-  "email":"redhafafa@gmail.com",
+  "name":"al fath",
+  "email":"fath@gmail.com",
   "password":"12345678",
-  "avatar":"https://images.com",
+  "avatar":"https://imagesa.com",
   "profession":"backend web dev" 
 }
 
 ###
 //get user by id
-get http://localhost:5000/users/1
+get http://localhost:5000/users/5
 
 
 ###
 //get users
-get http://localhost:5000/users?user_ids=5&user_ids=6
+get http://localhost:5000/users
 
 ###
 //user logout
@@ -49,7 +49,7 @@ post http://localhost:5000/users/logout
 Content-Type: application/json
 
 {
-  "user_id":"4"
+  "user_id":"5"
 }
 
 ### REFRESH TOKENS
